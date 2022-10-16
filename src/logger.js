@@ -1,6 +1,6 @@
 const url = "https://www.google.com"
 
-let printSomething = function() {
+let printSomething = function () {
     console.log("Request details are - a, b, c")
     return "done"
 }
