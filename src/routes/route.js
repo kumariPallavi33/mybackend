@@ -1,5 +1,39 @@
 const express = require('express');
 const router = express.Router();
+const lodash = require("lodash")
+router.get('/find-me', function (req,res) {
+        const arr = [1,2,3,5,6,7]
+        let n = arr.length+1
+        let sum_of_natural_number = n*(n+1)/2
+        sum_of_arr = 0; 
+        for(let i=0 ; i<arr.length; i++){
+           const element = arr[i];
+           sum_of_arr+=element
+      }
+      let missingnumber = sum_of_natural_number-sum_of_arr
+        res.send({missingnumber})
+     });
+    router.get('/find-me2', function (req,res) {
+            const arr = [33,34,35,37,38]
+            let n = arr.length+1
+            let sum_of_consecutive_number = n*(33+38)/2
+            sum_of_arr = 0; 
+            for(let i=0 ; i<arr.length; i++){
+               const element = arr[i];
+               sum_of_arr+=element
+          }
+          let missingnumber = sum_of_consecutive_number-sum_of_arr
+            res.send({missingnumber})
+         });
+
+
+
+
+
+
+
+
+
 
 router.get('/students/:name', function(req, res) {
     let studentName = req.params.name
